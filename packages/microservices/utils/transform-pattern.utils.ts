@@ -26,7 +26,7 @@ export function transformPatternToRoute(pattern: MsPattern): string {
   }
 
   const sortedKeys = Object.keys(pattern).sort((a, b) =>
-    ('' + a).localeCompare(b),
+    `${a}`.localeCompare(b),
   );
 
   // Creates the array of Pattern params from sorted keys and their corresponding values

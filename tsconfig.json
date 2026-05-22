@@ -33,7 +33,12 @@
       "@nestjs/platform-fastify/*": ["./packages/platform-fastify/*"],
       "@nestjs/platform-socket.io": ["./packages/platform-socket.io"],
       "@nestjs/platform-socket.io/*": ["./packages/platform-socket.io/*"],
-    }
+    },
+    "plugins": [
+      {
+        "transform": "@ttsc/lint"
+      }
+    ]
   },
   "include": ["packages/**/*", "integration/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]

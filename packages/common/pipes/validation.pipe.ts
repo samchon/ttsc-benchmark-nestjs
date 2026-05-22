@@ -207,7 +207,8 @@ export class ValidationPipe implements PipeTransform<any> {
 
   protected stripProtoKeys(value: any) {
     if (
-      value == null ||
+      value === null ||
+      value === undefined ||
       typeof value !== 'object' ||
       types.isTypedArray(value)
     ) {

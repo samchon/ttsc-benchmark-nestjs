@@ -20,7 +20,7 @@ export class JsonSocket extends TcpSocket {
       : dataRaw;
     this.buffer += data;
 
-    if (this.contentLength == null) {
+    if (this.contentLength === null || this.contentLength === undefined) {
       const i = this.buffer.indexOf(this.delimiter);
       /**
        * Check if the buffer has the delimiter (#),

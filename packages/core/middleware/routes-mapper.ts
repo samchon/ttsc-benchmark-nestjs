@@ -1,4 +1,5 @@
 import { MODULE_PATH, PATH_METADATA } from '@nestjs/common/constants';
+import type { RequestMethod } from '@nestjs/common/enums';
 import { RouteInfo, Type } from '@nestjs/common/interfaces';
 import {
   addLeadingSlash,
@@ -33,7 +34,7 @@ export class RoutesMapper {
   }
 
   private getRouteInfoFromPath(routePath: string): RouteInfo[] {
-    const defaultRequestMethod = -1;
+    const defaultRequestMethod = -1 as RequestMethod;
     return [
       {
         path: addLeadingSlash(routePath),
