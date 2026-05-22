@@ -31,8 +31,8 @@ import {
   urlencoded as bodyParserUrlencoded,
 } from 'body-parser';
 import * as bodyparser from 'body-parser';
-import * as cors from 'cors';
-import * as express from 'express';
+import cors = require('cors');
+import express = require('express');
 import * as http from 'http';
 import * as https from 'https';
 import { Duplex, pipeline } from 'stream';

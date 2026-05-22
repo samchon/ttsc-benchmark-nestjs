@@ -6,7 +6,7 @@ import {
   isString,
 } from '@nestjs/common/utils/shared.utils';
 import { iterate } from 'iterare';
-import * as pathToRegexp from 'path-to-regexp';
+import pathToRegexp = require('path-to-regexp');
 import { uid } from 'uid';
 import { ExcludeRouteMetadata } from '../router/interfaces/exclude-route-metadata.interface';
 import { isRouteExcluded } from '../router/utils';
