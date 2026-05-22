@@ -1,3 +1,18 @@
+const benchmarkRules = {
+  'no-var': 'error',
+  'prefer-const': 'error',
+  eqeqeq: 'error',
+  'object-shorthand': 'error',
+  'no-unneeded-ternary': 'error',
+  'prefer-template': 'error',
+  'no-useless-rename': 'error',
+  'dot-notation': 'error',
+  'no-extra-boolean-cast': 'error',
+  'no-useless-escape': 'error',
+  '@typescript-eslint/prefer-as-const': 'error',
+  '@typescript-eslint/prefer-namespace-keyword': 'error',
+};
+
 module.exports = {
   root: true,
   env: {
@@ -23,6 +38,7 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/ban-types': 'off',
+        ...benchmarkRules,
       },
     },
     {

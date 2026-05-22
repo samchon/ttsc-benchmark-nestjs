@@ -449,7 +449,7 @@ export class ServerGrpc extends Server implements CustomTransportStrategy {
       return key;
     }
     // Otherwise add next through dot syntax
-    return name + '.' + key;
+    return `${name}.${key}`;
   }
 
   private async createServices(grpcPkg: any, packageName: string) {

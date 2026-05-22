@@ -27,15 +27,15 @@ export const isPlainObject = (fn: any): fn is object => {
 export const addLeadingSlash = (path?: string): string =>
   path && typeof path === 'string'
     ? path.charAt(0) !== '/'
-      ? '/' + path
+      ? `/${path}`
       : path
     : '';
 
 export const normalizePath = (path?: string): string =>
   path
     ? path.startsWith('/')
-      ? ('/' + path.replace(/\/+$/, '')).replace(/\/+/g, '/')
-      : '/' + path.replace(/\/+$/, '')
+      ? `/${path.replace(/\/+$/, '')}`.replace(/\/+/g, '/')
+      : `/${path.replace(/\/+$/, '')}`
     : '/';
 
 export const stripEndSlash = (path: string) =>

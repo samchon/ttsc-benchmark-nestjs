@@ -172,7 +172,7 @@ export class WsAdapter extends AbstractWsAdapter {
     this.httpServersRegistry.set(port, httpServer);
 
     httpServer.on('upgrade', (request, socket, head) => {
-      const baseUrl = 'ws://' + request.headers.host + '/';
+      const baseUrl = `ws://${request.headers.host}/`;
       const pathname = new URL(request.url, baseUrl).pathname;
       const wsServersCollection = this.wsServersRegistry.get(port);
 

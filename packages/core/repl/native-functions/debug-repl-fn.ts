@@ -41,8 +41,8 @@ export class DebugReplFn extends ReplFunction {
     moduleDebugEntry: ModuleDebugEntry,
   ) {
     this.ctx.writeToStdout(`${clc.green(moduleName)}:\n`);
-    this.printCollection('controllers', moduleDebugEntry['controllers']);
-    this.printCollection('providers', moduleDebugEntry['providers']);
+    this.printCollection('controllers', moduleDebugEntry.controllers);
+    this.printCollection('providers', moduleDebugEntry.providers);
   }
 
   private printCollection(

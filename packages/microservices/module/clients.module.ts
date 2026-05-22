@@ -45,7 +45,7 @@ export class ClientsModule {
     return {
       module: ClientsModule,
       imports,
-      providers: providers,
+      providers,
       exports: providers,
     };
   }
