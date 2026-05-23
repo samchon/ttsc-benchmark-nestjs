@@ -269,12 +269,9 @@ export class NestFactoryStatic {
 
     return (...args: unknown[]) => {
       let result: unknown;
-      ExceptionsZone.run(
-        () => {
-          result = receiver[prop](...args);
-        },
-        teardown,
-      );
+      ExceptionsZone.run(() => {
+        result = receiver[prop](...args);
+      }, teardown);
 
       return result;
     };

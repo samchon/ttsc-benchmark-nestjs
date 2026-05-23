@@ -255,7 +255,10 @@ export class InstanceWrapper<T = any> {
       return introspectionResult;
     }
     introspectionResult = properties
-      ? callback(properties.map(item => item.wrapper), lookupRegistry)
+      ? callback(
+          properties.map(item => item.wrapper),
+          lookupRegistry,
+        )
       : false;
     if (introspectionResult || !enhancers) {
       return introspectionResult;

@@ -217,13 +217,16 @@ export class ConfigurableModuleBuilder<
             useValue: randomStringGenerator(),
           });
         }
-        return self.transformModuleDefinition({
-          module: this,
-          providers,
-        }, {
-          ...self.extras,
-          ...options,
-        });
+        return self.transformModuleDefinition(
+          {
+            module: this,
+            providers,
+          },
+          {
+            ...self.extras,
+            ...options,
+          },
+        );
       }
 
       static [asyncMethodKey](
@@ -237,14 +240,17 @@ export class ConfigurableModuleBuilder<
             useValue: randomStringGenerator(),
           });
         }
-        return self.transformModuleDefinition({
-          module: this,
-          imports: options.imports || [],
-          providers,
-        }, {
-          ...self.extras,
-          ...options,
-        });
+        return self.transformModuleDefinition(
+          {
+            module: this,
+            imports: options.imports || [],
+            providers,
+          },
+          {
+            ...self.extras,
+            ...options,
+          },
+        );
       }
 
       private static omitExtras(

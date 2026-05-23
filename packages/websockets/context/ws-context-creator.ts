@@ -109,22 +109,19 @@ export class WsContextCreator {
       return callback.apply(instance, args);
     };
 
-    return this.wsProxy.create(
-      async (...args: unknown[]) => {
-        const initialArgs = this.contextUtils.createNullArray(argsLength);
-        fnCanActivate && (await fnCanActivate(args));
+    return this.wsProxy.create(async (...args: unknown[]) => {
+      const initialArgs = this.contextUtils.createNullArray(argsLength);
+      fnCanActivate && (await fnCanActivate(args));
 
-        return this.interceptorsConsumer.intercept(
-          interceptors,
-          args,
-          instance,
-          callback,
-          handler(initialArgs, args),
-          contextType,
-        );
-      },
-      exceptionHandler,
-    );
+      return this.interceptorsConsumer.intercept(
+        interceptors,
+        args,
+        instance,
+        callback,
+        handler(initialArgs, args),
+        contextType,
+      );
+    }, exceptionHandler);
   }
 
   public reflectCallbackParamtypes(

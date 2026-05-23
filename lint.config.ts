@@ -23,5 +23,10 @@ export default {
     'no-useless-escape': 'error',
     'prefer-as-const': 'error',
     'prefer-namespace-keyword': 'error',
+    // Prettier and ttsc format disagree on call-arg wrapping in a handful of
+    // files (common/configurable-module.builder.ts, core/instance-wrapper.ts,
+    // websockets/ws-context-creator.ts). Disable print-width reflow so source
+    // stays byte-identical between branches.
+    'format/print-width': 'off',
   },
 } satisfies ITtscLintConfig;

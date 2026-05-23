@@ -26,7 +26,7 @@ export class HelpReplFn extends ReplFunction {
       )} on any function listed below (e.g.: ${clc.bold('help.help')}):\n\n${
         sortedNativeFunctions.map(HelpReplFn.buildHelpMessage).join('\n')
         // Without the following LF the last item won't be displayed
-        }\n`,
+      }\n`,
     );
   }
 }

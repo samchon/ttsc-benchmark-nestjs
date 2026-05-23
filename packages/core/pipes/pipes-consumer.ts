@@ -21,13 +21,10 @@ export class PipesConsumer {
     { metatype, type, data }: { metatype: any; type?: any; data?: any },
     transforms: PipeTransform[],
   ) {
-    return transforms.reduce(
-      async (deferredValue, pipe) => {
-        const val = await deferredValue;
-        const result = pipe.transform(val, { metatype, type, data });
-        return result;
-      },
-      Promise.resolve(value),
-    );
+    return transforms.reduce(async (deferredValue, pipe) => {
+      const val = await deferredValue;
+      const result = pipe.transform(val, { metatype, type, data });
+      return result;
+    }, Promise.resolve(value));
   }
 }
