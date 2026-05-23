@@ -1,32 +1,60 @@
 {
-  "extends": "../tsconfig.build.json",
   "compilerOptions": {
-    "outDir": ".",
-    "rootDir": ".",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "importHelpers": true,
+    "removeComments": false,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "useUnknownInCatchVariables": false,
+    "target": "es2017",
+    "sourceMap": false,
+    "allowJs": false,
+    "strict": true,
+    "strictNullChecks": false,
+    "types": [
+      "node"
+    ],
+    "outDir": "./dist",
+    "rootDir": "..",
     "paths": {
-      "@nestjs/common": ["../common"],
-      "@nestjs/common/*": ["../common/*"],
-      "@nestjs/core": ["../core"],
-      "@nestjs/core/*": ["../core/*"],
-      "@nestjs/microservices": ["../microservices"],
-      "@nestjs/microservices/*": ["../microservices/*"],
-      "@nestjs/platform-express": ["../platform-express"],
-      "@nestjs/platform-express/*": ["../platform-express/*"]
+      "@nestjs/common": [
+        "../common"
+      ],
+      "@nestjs/common/*": [
+        "../common/*"
+      ],
+      "@nestjs/core": [
+        "../core"
+      ],
+      "@nestjs/core/*": [
+        "../core/*"
+      ],
+      "@nestjs/microservices": [
+        "../microservices"
+      ],
+      "@nestjs/microservices/*": [
+        "../microservices/*"
+      ],
+      "@nestjs/platform-express": [
+        "../platform-express"
+      ],
+      "@nestjs/platform-express/*": [
+        "../platform-express/*"
+      ]
     }
   },
-  "exclude": ["node_modules", "dist", "test/**/*", "*.spec.ts"],
-  "references": [
-    {
-      "path": "../common/tsconfig.build.json"
-    },
-    {
-      "path": "../core/tsconfig.build.json"
-    },
-    {
-      "path": "../microservices/tsconfig.build.json"
-    },
-    {
-      "path": "../platform-express/tsconfig.build.json"
-    }
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test/**/*",
+    "*.spec.ts"
   ]
 }
