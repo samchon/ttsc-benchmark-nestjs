@@ -2,7 +2,6 @@ import type { ITtscLintConfig } from '@ttsc/lint';
 
 // Shared benchmark lint rules matching the legacy ESLint branch.
 export default {
-  ignores: ['**/*.spec.ts', '**/node_modules/**', '**/dist/**'],
   format: {
     printWidth: 80,
     tabWidth: 2,
