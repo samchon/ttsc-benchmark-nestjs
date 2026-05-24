@@ -16,27 +16,19 @@
     "allowJs": false,
     "strict": true,
     "strictNullChecks": false,
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "outDir": "./dist",
     "rootDir": "..",
     "paths": {
-      "@nestjs/common": [
-        "../common"
-      ],
-      "@nestjs/common/*": [
-        "../common/*"
-      ]
-    }
+      "@nestjs/common": ["../common"],
+      "@nestjs/common/*": ["../common/*"]
+    },
+    "plugins": [
+      {
+        "transform": "@ttsc/lint"
+      }
+    ]
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "test/**/*",
-    "*.spec.ts"
-  ]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist", "test/**/*", "*.spec.ts"]
 }
