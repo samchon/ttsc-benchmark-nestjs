@@ -20,8 +20,8 @@ export default {
     'dot-notation': 'error',
     'no-extra-boolean-cast': 'error',
     'no-useless-escape': 'error',
-    'prefer-as-const': 'error',
-    'prefer-namespace-keyword': 'error',
+    'typescript/prefer-as-const': 'error',
+    'typescript/prefer-namespace-keyword': 'error',
     // Prettier and ttsc format disagree on call-arg wrapping in a handful of
     // files (common/configurable-module.builder.ts, core/instance-wrapper.ts,
     // websockets/ws-context-creator.ts). Disable print-width reflow so source
