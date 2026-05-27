@@ -38,6 +38,17 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/ban-types': 'off',
+        // Disabled because @ttsc/lint has no counterpart; keeps lint cells fair.
+        'prefer-rest-params': 'off',
+        '@typescript-eslint/no-extra-semi': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        // Disabled on both sides: the @ttsc/lint implementation flags NestJS
+        // patterns that the typescript-eslint preset accepts. Dropping these
+        // keeps the benchmark a like-for-like rule-set comparison.
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/adjacent-overload-signatures': 'off',
+        '@typescript-eslint/no-inferrable-types': 'off',
+        '@typescript-eslint/triple-slash-reference': 'off',
         ...benchmarkRules,
       },
     },
@@ -56,6 +67,16 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/ban-types': 'off',
         '@typescript-eslint/no-empty-function': 'off',
+        // Disabled because @ttsc/lint has no counterpart; keeps lint cells fair.
+        'prefer-rest-params': 'off',
+        '@typescript-eslint/no-extra-semi': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        // Disabled on both sides: the @ttsc/lint implementation flags NestJS
+        // patterns that the typescript-eslint preset accepts. Dropping these
+        // keeps the benchmark a like-for-like rule-set comparison.
+        '@typescript-eslint/adjacent-overload-signatures': 'off',
+        '@typescript-eslint/no-inferrable-types': 'off',
+        '@typescript-eslint/triple-slash-reference': 'off',
       },
     }
   ]
